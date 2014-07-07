@@ -30,6 +30,8 @@ Once the user successfully authenticates and authorizes your application, we wil
 REDIRECT_URI?code=CODE&state=STATE
 ```
 
+**Note:** The **code** is valid for up to 10 minutes and is invalidated on first use.
+
 Next you will POST this **code** to the token endpoint to receive a **access_token** and **refresh_token**.
 
 ```
