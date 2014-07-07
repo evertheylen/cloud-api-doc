@@ -59,21 +59,21 @@ token:
 `expires_in` indicates the number of seconds that the access token may remain 
 valid. The refresh token may remain valid for up to six months.
 
-If unsuccessful, this call returns an error with a message:
+If unsuccessful, this call returns an error with a description. Examples:
 
 ```JSON
 400 Bad Request
 {
     "error": "invalid_request",
-    "error_description": "Client signature mismatch."
+    "error_description": "Client ID or signature mismatch."
 }
 ```
 
 ```JSON
 401 Unauthorized
 {
-    "error": "invalid_client",
-    "error_description": "Username and password do not match."
+    "error": "invalid_request",
+    "error_description": "Invalid authorization code."
 }
 ```
 
