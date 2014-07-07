@@ -21,7 +21,7 @@ and a long-lived refresh token:
 
 ```
 curl https://api.eyefi.com/oauth/access_token \
-	-F 'client_id=CLIENT-ID' \
+    -F 'client_id=CLIENT-ID' \
     -F 'client_secret=CLIENT-SECRET' \
     -F 'grant_type=password' \
     -F 'username=USERNAME' \
@@ -34,10 +34,10 @@ token:
 ```JSON
 200 OK
 {
-	"access_token": "JDJhJDA4JFhpbXBLVzM4MldOamFIUkcwUS9FRE9tZmJreVVSdlROVWdlY0VSbGpOcjlTcGlYRlRkNzZT",
-	"expires_in": 86400,
-	"refresh_token":"JDJ5JDA4JHd1dzFhQUdHc004czJ2dUtreVYzbU9oUkx0U0c4MDJhTjNnWjZMc1pwYTVuTXBzRUNuYklh",
-	"token_type":"Bearer"
+    "access_token": "JDJhJDA4JFhpbXBLVzM4MldOamFIUkcwUS9FRE9tZmJreVVSdlROVWdlY0VSbGpOcjlTcGlYRlRkNzZT",
+    "expires_in": 86400,
+    "refresh_token":"JDJ5JDA4JHd1dzFhQUdHc004czJ2dUtreVYzbU9oUkx0U0c4MDJhTjNnWjZMc1pwYTVuTXBzRUNuYklh",
+    "token_type":"Bearer"
 }
 ```
 
@@ -49,16 +49,16 @@ If unsuccessful, this call returns an error with a message:
 ```JSON
 400 Bad Request
 {
-	"error": "invalid_request",
-	"error_description": "Client signature mismatch."
+    "error": "invalid_request",
+    "error_description": "Client signature mismatch."
 }
 ```
 
 ```JSON
 401 Unauthorized
 {
-	"error": "invalid_client",
-	"error_description": "Username and password do not match."
+    "error": "invalid_client",
+    "error_description": "Username and password do not match."
 }
 ```
 
@@ -111,9 +111,9 @@ All responses come in JSON format in a simple envelope around a dictionary:
 
 ```JSON
 {
-  "id": 100000000,
-  "name": "NAME",
-  "email": "EMAIL"
+    "id": 100000000,
+    "name": "NAME",
+    "email": "EMAIL"
 }
 ```
 
@@ -121,16 +121,16 @@ or a list:
 
 ```JSON
 [
-  {
-    "id": 100000001,
-    "name": "NAME",
-    "file_count": FILE_COUNT
-  },
-  {
-    "id": 100000002,
-    "name": "NAME",
-    "file_count": FILE_COUNT
-  }
+    {
+        "id": 100000001,
+        "name": "NAME",
+        "file_count": FILE_COUNT
+    },
+    {
+        "id": 100000002,
+        "name": "NAME",
+        "file_count": FILE_COUNT
+    }
 ]
 ```
 
@@ -154,7 +154,7 @@ When an error occurs the server returns a 4xx or 5xx status code and JSON error 
 
 ```JSON
 {
-  "message": "Invalid email address"
+    "message": "Invalid email address"
 }
 ```
 
