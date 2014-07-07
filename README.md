@@ -14,18 +14,31 @@ for simple-but-effective authentication and authorization.
 
 All requests must happen over **https**.
 
-## Resource Owner Password Credentials
+## Authorization Code Grant Flow
 
-The resource owner's username and password are exchanged for an access token 
-and a long-lived refresh token:
+Redirect the user to our authorization URL:
 
 ```
-curl https://api.eyefi.com/oauth/access_token \
-    -F 'client_id=CLIENT-ID' \
-    -F 'client_secret=CLIENT-SECRET' \
-    -F 'grant_type=password' \
-    -F 'username=USERNAME' \
-    -F 'password=PASSWORD'
+https://api.eyefi.com/oauth/authorize?client_id=CLIENT_ID&response_type=code&redirect_uri=REDIRECT_URI&state=STATE
+```
+
+**Note:** **state** is optional but recommended. Read more about it [here](http://tools.ietf.org/html/rfc6749#section-4.1.1).
+
+Once the user successfully authenticates and authorizes your application, we will redirect them to your redirect URI with a **code** parameter:
+
+```
+REDIRECT_URI?code=CODE&state=STATE
+```
+
+Next you will POST this **code** to the token endpoint to receive a **access_token** and **refresh_token**.
+
+```
+curl https://api.eyefi.com/oauth/token \
+    -F 'client_id=CLIENT_ID' \
+    -F 'client_secret=CLIENT_SECRET' \
+    -F 'grant_type=authorization_code' \
+    -F 'redirect_uri=REDIRECT_URI' \
+    -F 'code=CODE'
 ```
 
 If successful, this call returns an access token and a long-lived refresh 
