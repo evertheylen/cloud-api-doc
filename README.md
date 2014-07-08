@@ -22,7 +22,7 @@ Redirect the user to our authorization URL:
 https://api.eyefi.com/oauth/authorize?client_id=CLIENT_ID&response_type=code&redirect_uri=REDIRECT_URI&state=STATE
 ```
 
-**Note:** **state** is optional but recommended. Read more about it [here](http://tools.ietf.org/html/rfc6749#section-4.1.1).
+**Note:** The **state** parameter is optional but recommended. Read more about it [here](http://tools.ietf.org/html/rfc6749#section-4.1.1).
 
 Once the user successfully authenticates and authorizes your application, we will redirect them to your redirect URI with a **code** parameter:
 
@@ -42,6 +42,8 @@ curl https://api.eyefi.com/oauth/token \
     -F 'redirect_uri=REDIRECT_URI' \
     -F 'code=CODE'
 ```
+
+**Note:** The **redirect_uri** must be the same one used in the authorization request.
 
 If successful, this call returns an access token and a long-lived refresh 
 token:
