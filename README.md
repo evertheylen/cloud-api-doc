@@ -4,6 +4,8 @@ The Eyefi Cloud API is a RESTful API that uses OAuth 2.0 for authentication.
 
 **NOTE:** Access to the API is currently limited and granted on a case by case basis. For access please [apply](https://docs.google.com/forms/d/1kxAlAWullYE-gOHMa3-5ujmccB-xKx1HewlPBGz9Ev0/viewform). We look forward to hearing from you.
 
+Try out the API in our [console](https://apigee.com/kimgust1/embed/console/eyefi). Keep in touch with us at [@eyefidev](https://twitter.com/eyefidev).
+
 ## Important Terms
 
 * **Users:** Users are user accounts.
