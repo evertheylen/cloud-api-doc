@@ -70,6 +70,41 @@ curl https://api.eyefi.com/3/albums
     -d '{"name":"NAME"}'
 ```
 
+### Note on documentation
+
+For each API call there are a list of parameters that are required.  The first
+parameters in the list, especially those that refer to the object id or the referenced object id, may be required 
+in the URL and additional parameters are in the body.  An example is updating an album (rename album 12345678 to 
+be "NEWNAME").  The documentation for Updating an Album will refer to the API call as:
+
+```
+PUT /albums/{albumId}
+```
+
+Which indicates that the {albumId} needs to be in the URL.  The parameters table looks like this:
+
+<br>
+
+| Name | Type | Description |
+|------|:----:|-------------|
+| albumId | integer | The ID of the album to update. |
+| name | string | The new album name. |
+| privacy | integer | Privacy setting for the album. Use 0 for private and 1 for public. Setting privacy to 1 also returns a share URL. |
+
+Indicating the meaning of all parameters, some of which are in the URL and some of which should be form or JSON encoded
+in the body.
+
+A curl example then looks like this, with the object id in the URL "{albumId}" and the "name" parameter in the body:
+
+```
+curl https://api.eyefi.com/3/albums/12345678
+    -H 'Authorization: Bearer ACCESS_TOKEN' 
+    -X 'PUT'
+    -H 'Content-Type: application/json' 
+    -d '{"name":"NEWNAME"}'
+```
+
+
 ## Responses
 
 All responses come in JSON format in a simple envelope around a dictionary:

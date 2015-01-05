@@ -6,7 +6,7 @@ available under the /tags endpoint.
 
 | Method | Description |
 |--------|-------------|
-| [GET /tags]{#get-tags} | Gets a user's tags. |
+| [GET /tags](#get-tags) | Gets a user's tags. |
 | [GET /tags/{tagId}](#get-tagstagid) | Gets a specific tag. |
 | [PUT /tags/{tagId}](#put-tagstagid) | Updates a tag name. |
 | [DELETE /tags/{tagId}](#delete-tagstagid) | Deletes an tag. |
@@ -18,10 +18,6 @@ Gets a user's tags.
 ### Authorization
 
 `User`
-
-### Parameters
-
-### Returns
 
 ### Response
 
@@ -141,14 +137,6 @@ Deletes a tag.
 | Name | Type | Description |
 |------|:----:|-------------|
 | tagId | integer | The ID of the tag to delete. |
-
-### Returns
-
-None.
-
-### Response
-
-None.
 
 ### Status Codes
 

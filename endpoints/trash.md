@@ -14,8 +14,6 @@ Gets the files in the user's trash.
 
 `User`
 
-### Parameters
-
 ### Returns
 
 Returns an array of the the files in the user's trash.
@@ -67,12 +65,6 @@ Empties the trash.
 
 `User`
 
-### Parameters
-
-### Returns
-
-### Response
-
 ### Status Codes
 
 | Code | Reason |
@@ -92,10 +84,6 @@ Restores a file from the trash.
 | Name | Type | Description |
 |------|:----:|-------------|
 | fileId | integer | The ID of the file to restore. |
-
-### Returns
-
-### Response
 
 ### Status Codes
 

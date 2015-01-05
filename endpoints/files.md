@@ -28,8 +28,6 @@ Uploads a file up to 100 MB.
 |------|:----:|-------------|
 | File | file | The file to upload. |
 
-### Returns
-
 ### Response
 
 ```JSON
@@ -75,10 +73,6 @@ Gets a list of a user's files.
 ### Authorization
 
 `user`
-
-### Parameters
-
-### Returns
 
 ### Response
 
@@ -150,8 +144,6 @@ Gets detailed information on a file.
 | Name | Type | Description |
 |------|:----:|-------------|
 | fileId | integer | ID of the file to get details onß. |
-
-### Returns
 
 ### Response
 
@@ -269,8 +261,6 @@ Get tags on a file.
 |------|:----:|-------------|
 | fileId | integer | The ID of the file to get tags for. |
 
-### Returns
-
 ### Response
 
 ```JSON
@@ -313,10 +303,6 @@ Removes a tag from a file.
 | fileId | integer | ID of the file to remove a tag from. |
 | tagId | integer | ID of the tag to remove. |
 
-### Returns
-
-### Response
-
 ### Status Codes
 
 | Code | Reason |
@@ -337,12 +323,6 @@ Deletes a file.
 | Name | Type | Description |
 |------|:----:|-------------|
 | fileId | integer | ID of the file to delete. |
-
-### Returns
-
-### Response
-
-None.
 
 ### Status Codes
 

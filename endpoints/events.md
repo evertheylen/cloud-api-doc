@@ -19,8 +19,6 @@ Gets a user's events.
 
 `User`
 
-### Parameters
-
 ### Returns
 
 Returns an array of the user's events.
@@ -66,8 +64,6 @@ Gets a user event.
 | Name | Type | Description |
 |------|:----:|-------------|
 | eventId | integer | The ID of the event to get. |
-
-### Returns
 
 ### Response
 
@@ -157,8 +153,6 @@ Deletes an event.
 | Name | Type | Description |
 |------|:----:|-------------|
 | eventId | string | ID of the event to delete. |
-
-### Returns
 
 ### Response
 

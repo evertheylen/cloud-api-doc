@@ -8,6 +8,7 @@ An album is a user created collection of Files.  A file can be in any number of 
 | [GET /albums](#get-albums) | Gets a user's albums. |
 | [GET /albums/{albumId}](#get-albumsalbumid) | Gets a specific album. |
 | [PUT /albums/{albumId}](#put-albumsalbumid) | Updates an album. |
+| [POST /albums/{albumId}/files](#post-albumsalbumidfiles) | Adds files to a user album. |
 | [GET /albums/{albumId}/files](#get-albumsalbumidfiles) | Gets the files in an album. |
 | [PUT /albums/{albumId}/files](#put-albumsalbumidfiles) | Updates album files. Files are listed as a comma-separated array. |
 | [DELETE /albums/{albumId}/files/{fileId}](#delete-albumsalbumidfilesfileid) | Removes a file from an album. |
@@ -76,10 +77,6 @@ Gets a user's albums.
 ### Authorization
 
 `User`
-
-### Parameters
-
-### Returns
 
 ### Response
 
@@ -371,10 +368,6 @@ Removes a file from an album
 | albumId | integer | ID of the album to be modified. |
 | fileId | integer | ID of the file to remove from the album. |
 
-### Returns
-
-### Response
-
 ### Status Codes
 
 | Code | Reason |
@@ -395,14 +388,6 @@ Deletes an album.  This is not recoverable.  It does not affect the underlying f
 | Name | Type | Description |
 |------|:----:|-------------|
 | albumId | integer | The ID of the album to delete. |
-
-### Returns
-
-None.
-
-### Response
-
-None.
 
 ### Status Codes
 

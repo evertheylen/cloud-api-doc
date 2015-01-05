@@ -9,7 +9,10 @@ few seconds for search results to update when changes are made to searched objec
 |--------|-------------|
 | [GET /search/files](#get-searchfiles) | Gets a list of files that match the search criteria. |
 | [GET /search/saved](#get-searchsaved) | Gets the list of saved searches available ot a user. |
-| [GET /search/saved/{seachId}/files](#get-searchsavedsearchIdfiles) | Gets a list of files that match the saved search criteria. |
+| [POST /search/saved](#post-searchsaved) | Create a new saved searc. |
+| [PUT /search/saved/{searchid}](#put-searchsaved) | Update a saved search. |
+| [DELETE /search/saved/{searchid}](#delete-searchsaved) | Delete a saved search. |
+| [GET /search/saved/{searchId}/files](#get-searchsavedsearchIdfiles) | Gets a list of files that match the saved search criteria. |
 
 ## GET /search/files
 
@@ -37,8 +40,6 @@ Creates an ad-hoc search and returns the file list
 | date_to | string | End Date in the format of YYYY-MM-DD.  Photos need to be taken before date_to to be included in search results. |
 | page | integer | Request page to allow for paged search results (default 1). |
 | per_page | integer | Items per page (default 10). |
-
-### Returns
 
 ### Response
 
