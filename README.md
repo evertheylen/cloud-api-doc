@@ -2,14 +2,16 @@
 
 The Eyefi Cloud API is a RESTful API that uses OAuth 2.0 for authentication.
 
-**NOTE:** Access to the API is currently limited and granted on a case by case basis. For access please [apply](http://bit.ly/eyefiapiform). We look forward to hearing from you.
+APIs are provided that allow for Photo upload and download, Album creation and curation, 
+Tag creation and curation, and Photo searching.  Eye-Fi will continue to maintain the publicly available API set
+through regular updates to the cloud-api-doc GitHub project.
 
-Try out the API in our [console](http://bit.ly/eyefiapiconsole). Keep in touch with us at [@eyefidev](https://twitter.com/eyefidev).
-
-## Important Terms
-
-* **Users:** Users are user accounts.
-* **Events:** Events are the default file organization structure in the Eyefi Cloud API. Events are groups of photos organized by date (i.e., the date on which the pictures were created, or a range of dates covering a vacation or holiday). Photos in an event are organized chronologically from oldest to newest. Files will always exist in a single event.
+Each API endpoint is described in a separate file in the endpoints folder.  Parameter descriptions are provided
+for each API.  Separately a Python SDK is available in the 
+[cloud-api-python repository](http://www.github.com/eyefi/cloud-api-python).
+    
+Support for the API is provided on a best effort basis through 
+[Github Issues](https://github.com/eyefi/cloud-api-doc/issues).
 
 # Authentication
 
@@ -18,112 +20,91 @@ for simple-but-effective authentication and authorization.
 
 All requests must happen over **https**.
 
-## Authorization Code Grant Flow
+## Obtaining an Access Token
 
-Redirect the user to our authorization URL:
+* Please note that this feature is not yet live in the Web App as of 2015-01-06.  It is expected to go live within
+a week.  This comment will be removed when tokens are retrievable from the Web App.
 
-```
-https://api.eyefi.com/oauth/authorize?client_id=CLIENT_ID&response_type=code&redirect_uri=REDIRECT_URI&state=STATE
-```
+An end user will obtain an access token from the [Eyefi Web App](https://app.eyefi.com).
+Under the account menu tree there is an option called "Developer".  This controls the current list
+of access tokens.  Select the '+' icon to generate a new access token to be used
+to contact the API.  If you wish to remove or regenerate access tokens this can also be done
+from this screen.
 
-**Note:** The **state** parameter is optional but recommended. Read more about it [here](http://tools.ietf.org/html/rfc6749#section-4.1.1).
-
-Once the user successfully authenticates and authorizes your application, we will redirect them to your redirect URI with a **code** parameter:
-
-```
-REDIRECT_URI?code=CODE&state=STATE
-```
-
-**Note:** The **code** is valid for up to 10 minutes and is invalidated on first use.
-
-Next you will POST this **code** to the token endpoint to receive a **access_token** and **refresh_token**.
+## Using the Access Token
+ 
+Once the token has been obtained, it should be passed with every API call in an authorization header:
 
 ```
-curl https://api.eyefi.com/oauth/token \
-    -F 'client_id=CLIENT_ID' \
-    -F 'client_secret=CLIENT_SECRET' \
-    -F 'grant_type=authorization_code' \
-    -F 'redirect_uri=REDIRECT_URI' \
-    -F 'code=CODE'
+Authorization: Bearer ACCESS_TOKEN
 ```
 
-**Note:** The **redirect_uri** must be the same one used in the authorization request.
+For example if you were using curl to get the list of albums in a user's account, it would look like this:
 
-If successful, this call returns an access token and a long-lived refresh 
-token:
-
-```JSON
-200 OK
-{
-    "access_token": "JDJhJDA4JFhpbXBLVzM4MldOamFIUkcwUS9FRE9tZmJreVVSdlROVWdlY0VSbGpOcjlTcGlYRlRkNzZT",
-    "expires_in": 86400,
-    "refresh_token":"JDJ5JDA4JHd1dzFhQUdHc004czJ2dUtreVYzbU9oUkx0U0c4MDJhTjNnWjZMc1pwYTVuTXBzRUNuYklh",
-    "token_type":"Bearer"
-}
+```
+curl https://api.eyefi.com/3/albums
+    -H 'Authorization: Bearer ACCESS_TOKEN'
+    -X 'GET'
 ```
 
-`expires_in` indicates the number of seconds that the access token may remain 
-valid. The refresh token may remain valid for up to six months.
-
-If unsuccessful, this call returns an error with a description. Examples:
-
-```JSON
-400 Bad Request
-{
-    "error": "invalid_request",
-    "error_description": "Client ID or signature mismatch."
-}
-```
-
-```JSON
-401 Unauthorized
-{
-    "error": "invalid_request",
-    "error_description": "Invalid authorization code."
-}
-```
-
-# Endpoints
-
-Eyefi's Cloud API is a RESTful API. Every endpoint may support up to four different 
-HTTP verbs. GET requests return information about a resource, POST requests 
-create resources, PUT requests update resources, and DELETE deletes resources.
-
-* [Users](endpoints/users.md)
-* [Events](endpoints/events.md)
+# API General Use
 
 ## Requests
 
-All requests must happen over **https** at the base URL 
-**https://api.eyefi.com/3**. The access token is passed in the header for 
-requests that require authorization.
-
-Example GET request:
-
-```
-curl https://api.eyefi.com/3/users/me \
-    -H 'Authorization: Bearer ACCESS_TOKEN'
-```
+Each of the API endpoints has a series of operations with a mixture of POST, GET, PUT, and DELETE.
 
 For POST and PUT requests, the data can be passed in the body using content 
 type `application/x-www-form-urlencoded`:
 
 ```
-curl https://api.eyefi.com/3/users/me \
-    -H 'Authorization: Bearer ACCESS_TOKEN' \
-    -X 'PUT' \
-    -d 'name=NAME' \
-    -d 'email=EMAIL'
+curl https://api.eyefi.com/3/albums
+    -H 'Authorization: Bearer ACCESS_TOKEN' 
+    -X 'POST' 
+    -d 'name=NAME' 
 ```
 
 or content type `application/json`:
 
 ```
-curl https://api.eyefi.com/3/users/me \
-    -H 'Authorization: Bearer ACCESS_TOKEN' \
-    -X 'PUT' \
-    -H 'Content-Type: application/json' \
-    -d '{"name":"NAME","email":"EMAIL"}'
+curl https://api.eyefi.com/3/albums
+    -H 'Authorization: Bearer ACCESS_TOKEN' 
+    -X 'POST'
+    -H 'Content-Type: application/json' 
+    -d '{"name":"NAME"}'
+```
+
+### Note on documentation
+
+For each API call there are a list of parameters that are required.  The first
+parameters in the list, especially those that refer to the object id or the referenced object id, may be required 
+in the URL and additional parameters are in the body.  An example is updating an album (rename album 12345678 to 
+be "NEWNAME").  The documentation for Updating an Album will refer to the API call as:
+
+```
+PUT /albums/{albumId}
+```
+
+Which indicates that the {albumId} needs to be in the URL.  The parameters table looks like this:
+
+<br>
+
+| Name | Type | Description |
+|------|:----:|-------------|
+| albumId | integer | The ID of the album to update. |
+| name | string | The new album name. |
+| privacy | integer | Privacy setting for the album. Use 0 for private and 1 for public. Setting privacy to 1 also returns a share URL. |
+
+Indicating the meaning of all parameters, some of which are in the URL and some of which should be form or JSON encoded
+in the body.
+
+A curl example then looks like this, with the object id in the URL "{albumId}" and the "name" parameter in the body:
+
+```
+curl https://api.eyefi.com/3/albums/12345678
+    -H 'Authorization: Bearer ACCESS_TOKEN' 
+    -X 'PUT'
+    -H 'Content-Type: application/json' 
+    -d '{"name":"NEWNAME"}'
 ```
 
 ## Responses
@@ -134,7 +115,7 @@ All responses come in JSON format in a simple envelope around a dictionary:
 {
     "id": 100000000,
     "name": "NAME",
-    "email": "EMAIL"
+    "file_count": FILE_COUNT    
 }
 ```
 
@@ -155,7 +136,7 @@ or a list:
 ]
 ```
 
-### Status Codes
+## Status Codes
 
 | Code | Description |
 |--------|-------------|
@@ -169,7 +150,7 @@ or a list:
 | 409 | Conflict. Resource already exists, such as email already in use. |
 | 500 | Internal server error. |
 
-### Errors
+## Errors
 
 When an error occurs the server returns a 4xx or 5xx status code and JSON error message that should be used purely for debugging:
 
@@ -179,6 +160,8 @@ When an error occurs the server returns a 4xx or 5xx status code and JSON error 
 }
 ```
 
+## Miscellaneous Items
+
 ### Dates
 
 All date fields are returned as [ISO 8601](https://www.google.com/search?q=%22ISO+8601%22)-formatted strings and are normalized to UTC.
@@ -186,3 +169,18 @@ All date fields are returned as [ISO 8601](https://www.google.com/search?q=%22IS
 ```
 2014-02-03T12:37:08+00:00
 ```
+
+## Endpoint Listing
+
+* [Albums](endpoints/albums.md)
+* [Events](endpoints/events.md)
+* [Files](endpoints/files.md)
+* [Tags](endpoints/tags.md)
+* [Search](endpoints/search.md)
+* [Trash](endpoints/trash.md)
+
+
+
+
+
+
