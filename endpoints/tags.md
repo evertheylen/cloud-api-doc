@@ -9,7 +9,7 @@ available under the /tags endpoint.
 | [GET /tags](#get-tags) | Gets a user's tags. |
 | [GET /tags/{tagId}](#get-tagstagid) | Gets a specific tag. |
 | [PUT /tags/{tagId}](#put-tagstagid) | Updates a tag name. |
-| [DELETE /tags/{tagId}](#delete-tagstagid) | Deletes an tag. |
+| [DELETE /tags/{tagId}](#delete-tagstagid) | Deletes a tag. |
 
 ## GET /tags
 
