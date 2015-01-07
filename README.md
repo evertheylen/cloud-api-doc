@@ -10,8 +10,8 @@ Each API endpoint is described in a separate file in the endpoints folder.  Para
 for each API.  Separately a Python SDK is available in the 
 [cloud-api-python repository](http://www.github.com/eyefi/cloud-api-python).
     
-Support for the API is provided on a best effort basis through [Stack Overflow](http://www.stackoverflow.com).
-Please make sure to tag your questions with "eyefi".
+Support for the API is provided on a best effort basis through 
+[Github Issues](https://github.com/eyefi/cloud-api-doc/issues).
 
 # Authentication
 
