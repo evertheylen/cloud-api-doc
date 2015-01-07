@@ -111,8 +111,6 @@ Updates an event.
 | start_date | Date | The new start date for the event. |
 | end_date | Date | The new end date for the event. |
 
-### Returns
-
 ### Response
 
 ```JSON
@@ -179,6 +177,8 @@ Gets the files in an event.
 | Name | Type | Description |
 |------|:----:|-------------|
 | eventId | integer | The ID of the event for which to get files. |
+| Page | integer | When retrieving multiple pages of files, this is the page number to retrieve |
+| Per_Page | integer | When retrieving multiple pages of files, this is the number of files per page to retrieve (default 100) |
 
 ### Returns
 
@@ -187,23 +187,45 @@ Returns an array of files.
 ### Response
 
 ```JSON
-[
-  {
-    "id": "integer",
-    "name": "string",
-    "date_time_taken": "string",
-    "size": {
-      "width": "integer",
-      "height": "integer"
-    },
-    "thumbnails": {
-      "url": "string"
-      "s640": "string",
-      "s1280": "string",
-      "s2048": "string",
-    }
-  }
-]
+{
+  "total_count": integer,
+  "items": {
+             [
+               {
+                 "id": integer,
+                 "name": "string",
+                 "media": "string",
+                 "bytes": integer,
+                 "date_time_taken": "Date",
+                 "size": {
+                   "width": integer,
+                   "height": integer
+                 },
+                 "exif": {
+                   "exposure_comp": "string",
+                   "shutter_speed": "string",
+                   "flash": "string",
+                   "metering_mode": "string",
+                   "lens": "string",
+                   "camera": "string",
+                   "iso": "string",
+                   "focal_length": "string",
+                   "aperture": "string"
+                 },
+                 "gps": {
+                   "lat": float, 
+                   "lng": float
+                 },
+                 "thumbnails": {
+                   "url": "string"
+                   "s640": "string",
+                   "s1280": "string",
+                   "s2048": "string",
+                 }
+               }
+             ]
+           }
+}
 ```
 
 | Key | Type | Description |

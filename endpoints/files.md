@@ -74,47 +74,60 @@ Gets a list of a user's files.
 
 `user`
 
+### Parameters
+
+| Name | Type | Description |
+|------|:----:|-------------|
+| Page | integer | When retrieving multiple pages of files, this is the page number to retrieve |
+| Per_Page | integer | When retrieving multiple pages of files, this is the number of files per page to retrieve (default 100) |
+
 ### Response
 
 ```JSON
-[
-  {
-    "id": integer,
-    "name": "string",
-    "media": "string",
-    "bytes": integer,
-    "date_time_taken": "Date",
-    "size": {
-      "width": integer,
-      "height": integer
-    },
-    "exif": {
-      "exposure_comp": "string",
-      "shutter_speed": "string",
-      "flash": "string",
-      "metering_mode": "string",
-      "lens": "string",
-      "camera": "string",
-      "iso": "string",
-      "focal_length": "string",
-      "aperture": "string"
-    },
-    "gps": {
-      "lat": float, 
-      "lng": float
-    },
-    "thumbnails": {
-      "url": "string"
-      "s640": "string",
-      "s1280": "string",
-      "s2048": "string",
-    }
-  }
-]
+{
+  "total_count": integer,
+  "items": {
+             [
+               {
+                 "id": integer,
+                 "name": "string",
+                 "media": "string",
+                 "bytes": integer,
+                 "date_time_taken": "Date",
+                 "size": {
+                   "width": integer,
+                   "height": integer
+                 },
+                 "exif": {
+                   "exposure_comp": "string",
+                   "shutter_speed": "string",
+                   "flash": "string",
+                   "metering_mode": "string",
+                   "lens": "string",
+                   "camera": "string",
+                   "iso": "string",
+                   "focal_length": "string",
+                   "aperture": "string"
+                 },
+                 "gps": {
+                   "lat": float, 
+                   "lng": float
+                 },
+                 "thumbnails": {
+                   "url": "string"
+                   "s640": "string",
+                   "s1280": "string",
+                   "s2048": "string",
+                 }
+               }
+             ]
+           }
+}
 ```
 
 | Key | Type | Description |
 |------|:----:|-------------|
+| total_count | integer | Total number of items available regardless of Page_Size.  The 'items' set size is limited by the Page_Size |
 | id | integer | File ID. |
 | name | string | File name. |
 | media | string | Full URL that can be used to download the file. |

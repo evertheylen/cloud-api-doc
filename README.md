@@ -6,12 +6,12 @@ APIs are provided that allow for Photo upload and download, Album creation and c
 Tag creation and curation, and Photo searching.  Eye-Fi will continue to maintain the publicly available API set
 through regular updates to the cloud-api-doc GitHub project.
 
-Each API endpoint is described in a separate markdown file.  Parameter descriptions and curl examples are provided
-for each API.  Separately there are API code samples provided in Python and there are more extensive
-tool examples (Warholizer, Directory Uploader, and Search n' Tag) provided in Python, C#, and JavaScript.
+Each API endpoint is described in a separate file in the endpoints folder.  Parameter descriptions are provided
+for each API.  Separately a Python SDK is available in the 
+[cloud-api-python repository](http://www.github.com/eyefi/cloud-api-python).
     
-Support for the API is provided on a best effort basis through our [community portal]
-(https://community.eyefi.com/eyefi/categories/eyefi_developer_api).
+Support for the API is provided on a best effort basis through [Stack Overflow](http://www.stackoverflow.com).
+Please make sure to tag your questions with "eyefi".
 
 # Authentication
 
@@ -20,15 +20,18 @@ for simple-but-effective authentication and authorization.
 
 All requests must happen over **https**.
 
-## Obtaining an Authentication Token
+## Obtaining an Access Token
 
-An end user will obtain an authentication token from the [Eyefi Web App](https://app.eyefi.com).
+* Please note that this feature is not yet live in the Web App as of 2015-01-06.  It is expected to go live within
+a week.  This comment will be removed when tokens are retrievable from the Web App.
+
+An end user will obtain an access token from the [Eyefi Web App](https://app.eyefi.com).
 Under the account menu tree there is an option called "Developer".  This controls the current list
-of authentication tokens.  Select the '+' icon to generate a new authentication token to be used
-to contact the API.  If you wish to remove or regenerate authentication tokens this can also be done
+of access tokens.  Select the '+' icon to generate a new access token to be used
+to contact the API.  If you wish to remove or regenerate access tokens this can also be done
 from this screen.
 
-## Using the Authentication Token
+## Using the Access Token
  
 Once the token has been obtained, it should be passed with every API call in an authorization header:
 
@@ -103,7 +106,6 @@ curl https://api.eyefi.com/3/albums/12345678
     -H 'Content-Type: application/json' 
     -d '{"name":"NEWNAME"}'
 ```
-
 
 ## Responses
 
