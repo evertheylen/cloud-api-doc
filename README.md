@@ -22,9 +22,6 @@ All requests must happen over **https**.
 
 ## Obtaining an Access Token
 
-* Please note that this feature is not yet live in the Web App as of 2015-01-06.  It is expected to go live within
-a week.  This comment will be removed when tokens are retrievable from the Web App.
-
 An end user will obtain an access token from the [Eyefi Web App](https://app.eyefi.com).
 Under the account menu tree there is an option called "Developer".  This controls the current list
 of access tokens.  Select the '+' icon to generate a new access token to be used
