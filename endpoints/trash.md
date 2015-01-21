@@ -22,19 +22,19 @@ Returns an array of the the files in the user's trash.
 
 ```javascript
 {
-  "id": "integer",
-  "name": "string",
-  "date_time_taken": "Date",
-  "size": {
-    "width": "integer",
-    "height": "integer"
-  },
-  "thumbnails": {
-    "url": "string"
-    "s640": "string",
-    "s1280": "string",
-    "s2048": "string",
-  }
+    "id": "integer",
+    "name": "string",
+    "date_time_taken": "Date",
+    "size": {
+        "width": "integer",
+        "height": "integer"
+    },
+    "thumbnails": {
+        "url": "string",
+        "s640": "string",
+        "s1280": "string",
+        "s2048": "string"
+    }
 }
 ```
 
@@ -42,7 +42,7 @@ Returns an array of the the files in the user's trash.
 |------|:----:|-------------|
 | id | integer | File ID. |
 | name | string | File name. |
-| date_time_taken | Date | Date and time the file was taken. |
+| date_time_taken | Date | Date and time the file was created. |
 | size / width | integer | The file's width in pixels. |
 | size / height | integer | The file's height in pixels. |
 | thumbnails / url | string | Base URL for the thumbnail; append file size to return specific sizes. |

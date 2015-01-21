@@ -1,6 +1,6 @@
 # Albums
 
-An album is a user created collection of Files.  A file can be in any number of Albums.  Albums can be named and shared.
+An album is a user-created collection of files. A file can be in any number of albums. Albums can be named and shared.
 
 | Method | Description |
 |--------|-------------|
@@ -32,19 +32,19 @@ Adds a user album.
 
 ```JSON
 {
-  "id": "integer",
-  "name": "string",
-  "file_count": "integer",
-  "start_date": "Date",
-  "end_date": "Date",
-  "privacy": "integer",
-  "share_url": "string",
-  "thumbnails": {
-    "url": "string"
-    "s640": "string",
-    "s1280": "string",
-    "s2048": "string",
-  }
+    "id": "integer",
+    "name": "string",
+    "file_count": "integer",
+    "start_date": "Date",
+    "end_date": "Date",
+    "privacy": "integer",
+    "share_url": "string",
+    "thumbnails": {
+        "url": "string",
+        "s640": "string",
+        "s1280": "string",
+        "s2048": "string"
+    }
 }
 ```
 
@@ -82,21 +82,21 @@ Gets a user's albums.
 
 ```JSON
 [
-  {
-    "id": "integer",
-    "name": "string",
-    "file_count": "integer",
-    "start_date": "Date",
-    "end_date": "Date",
-    "privacy": "integer",
-    "share_url": "string",
-    "thumbnails": {
-      "url": "string"
-      "s640": "string",
-      "s1280": "string",
-      "s2048": "string",
+    {
+        "id": "integer",
+        "name": "string",
+        "file_count": "integer",
+        "start_date": "Date",
+        "end_date": "Date",
+        "privacy": "integer",
+        "share_url": "string",
+        "thumbnails": {
+            "url": "string",
+            "s640": "string",
+            "s1280": "string",
+            "s2048": "string"
+        }
     }
-  }
 ]
 ```
 
@@ -139,19 +139,19 @@ Gets a specific album.
 
 ```JSON
 {
-  "id": "integer",
-  "name": "string",
-  "file_count": "integer",
-  "start_date": "Date",
-  "end_date": "Date",
-  "privacy": "integer",
-  "share_url": "string",
-  "thumbnails": {
-    "url": "string"
-    "s640": "string",
-    "s1280": "string",
-    "s2048": "string",
-  }
+    "id": "integer",
+    "name": "string",
+    "file_count": "integer",
+    "start_date": "Date",
+    "end_date": "Date",
+    "privacy": "integer",
+    "share_url": "string",
+    "thumbnails": {
+        "url": "string",
+        "s640": "string",
+        "s1280": "string",
+        "s2048": "string"
+    }
 }
 ```
 
@@ -198,19 +198,19 @@ Updates an album.
 
 ```JSON
 {
-  "id": "integer",
-  "name": "string",
-  "file_count": "integer",
-  "start_date": "Date",
-  "end_date": "Date",
-  "privacy": "integer",
-  "share_url": "string",
-  "thumbnails": {
-    "url": "string"
-    "s640": "string",
-    "s1280": "string",
-    "s2048": "string",
-  }
+    "id": "integer",
+    "name": "string",
+    "file_count": "integer",
+    "start_date": "Date",
+    "end_date": "Date",
+    "privacy": "integer",
+    "share_url": "string",
+    "thumbnails": {
+        "url": "string",
+        "s640": "string",
+        "s1280": "string",
+        "s2048": "string"
+    }
 }
 ```
 
@@ -256,21 +256,21 @@ Gets the files in an album.
 
 ```JSON
 [
-  {
-    "id": "integer",
-    "name": "string",
-    "date_time_taken": "Date",
-    "size": {
-      "width": "integer",
-      "height": "integer"
-    },
-    "thumbnails": {
-      "url": "string"
-      "s640": "string",
-      "s1280": "string",
-      "s2048": "string",
+    {
+        "id": "integer",
+        "name": "string",
+        "date_time_taken": "Date",
+        "size": {
+            "width": "integer",
+            "height": "integer"
+        },
+        "thumbnails": {
+            "url": "string",
+            "s640": "string",
+            "s1280": "string",
+            "s2048": "string"
+        }
     }
-  }
 ]
 ```
 
@@ -280,7 +280,7 @@ Gets the files in an album.
 |------|:----:|-------------|
 | id | integer | File ID. |
 | name | string | File name. |
-| date_time_taken | Date | Date and time the file was taken. |
+| date_time_taken | Date | Date and time the file was created. |
 | size / width | integer | The file's width in pixels. |
 | size / height | integer | The file's height in pixels. |
 | thumbnails / url | string | Base URL for the thumbnail; append file size to return specific sizes. |
@@ -296,7 +296,7 @@ Gets the files in an album.
 
 ## PUT /albums/{albumId}/files
 
-Updates album files. Files are listed as a comma-separated array.  This can be used to re-order the files in an album.
+Updates album files. Files are listed as a comma-separated array. Can be used to re-order the files in an album.
 
 ### Authorization
 
@@ -316,21 +316,21 @@ Returns a list of the updated files.
 
 ```JSON
 [
-  {
-    "id": "integer",
-    "name": "string",
-    "date_time_taken": "Date",
-    "size": {
-      "width": "integer",
-      "height": "integer"
-    },
-    "thumbnails": {
-      "url": "string"
-      "s640": "string",
-      "s1280": "string",
-      "s2048": "string",
+    {
+        "id": "integer",
+        "name": "string",
+        "date_time_taken": "Date",
+        "size": {
+            "width": "integer",
+            "height": "integer"
+        },
+        "thumbnails": {
+            "url": "string",
+            "s640": "string",
+            "s1280": "string",
+            "s2048": "string"
+        }
     }
-  }
 ]
 ```
 
@@ -338,7 +338,7 @@ Returns a list of the updated files.
 |------|:----:|-------------|
 | id | integer | File ID. |
 | name | string | File name. |
-| date_time_taken | Date | Date and time the file was taken. |
+| date_time_taken | Date | Date and time the file was created. |
 | size / width | integer | The file's width in pixels. |
 | size / height | integer | The file's height in pixels. |
 | thumbnails / url | string | Base URL for the thumbnail; append file size to return specific sizes. |
@@ -355,7 +355,7 @@ Returns a list of the updated files.
 
 ## DELETE /albums/{albumId}/files/{fileId}
 
-Removes a file from an album
+Removes a file from an album.
 
 ### Authorization
 
@@ -365,7 +365,7 @@ Removes a file from an album
 
 | Name | Type | Description |
 |------|:----:|-------------|
-| albumId | integer | ID of the album to be modified. |
+| albumId | integer | ID of the album to modify. |
 | fileId | integer | ID of the file to remove from the album. |
 
 ### Status Codes
@@ -377,7 +377,7 @@ Removes a file from an album
 
 ## DELETE /albums/{albumId}
 
-Deletes an album.  This is not recoverable.  It does not affect the underlying files.
+Deletes an album. This is not recoverable. Does not affect the files contained in the album.
 
 ### Authorization
 

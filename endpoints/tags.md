@@ -1,8 +1,7 @@
 # Tags
 
-Tags can be assigned to files to further categorize them.  Many of the APIs to apply tags are located under the /files
-endpoint.  If a tag is applied to a file and it does not exist, it is automatically created.  Other options are
-available under the /tags endpoint.
+Tags can be assigned to files to further categorize them. Many of the APIs to apply tags are located under the `/files`
+endpoint. If a tag is applied to a file and it does not exist, it is automatically created. Other options are available under the `/tags` endpoint.
 
 | Method | Description |
 |--------|-------------|
@@ -23,11 +22,11 @@ Gets a user's tags.
 
 ```JSON
 [
-  {
-    "id": "integer",
-    "name": "string",
-    "file_count": "integer"
-  }
+    {
+        "id": "integer",
+        "name": "string",
+        "file_count": "integer"
+    }
 ]
 ```
 
@@ -62,9 +61,9 @@ Gets a specific tag.
 
 ```JSON
 {
-  "id": "integer",
-  "name": "string",
-  "file_count": "integer"
+    "id": "integer",
+    "name": "string",
+    "file_count": "integer"
 }
 ```
 
@@ -102,9 +101,9 @@ Updates a tag.
 
 ```JSON
 {
-  "id": "integer",
-  "name": "string",
-  "file_count": "integer"
+    "id": "integer",
+    "name": "string",
+    "file_count": "integer"
 }
 ```
 
@@ -143,4 +142,3 @@ Deletes a tag.
 | Code | Reason |
 |------|-------------|
 | 404 | Album not found. |
-
