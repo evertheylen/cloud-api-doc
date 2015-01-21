@@ -88,7 +88,7 @@ Creates an ad-hoc search and returns the file list.
 
 | Key | Type | Description |
 |------|:----:|-------------|
-| total_count | integer | Total number of items available regardless of Page_Size. The "items" set size is limited by the Page_Size |
+| total_count | integer | Total number of items available regardless of Page_Size. The "items" set size is limited by the Page_Size. |
 | id | integer | File ID. |
 | name | string | File name. |
 | media | string | Full URL that can be used to download the file. |
@@ -399,7 +399,7 @@ Gets a list of files that match the saved search criteria.
 
 | Key | Type | Description |
 |------|:----:|-------------|
-| total_count | integer | Total number of items available regardless of Page_Size. The "items" set size is limited by the Page_Size |
+| total_count | integer | Total number of items available regardless of Page_Size. The "items" set size is limited by the Page_Size. |
 | id | integer | File ID. |
 | name | string | File name. |
 | media | string | Full URL that can be used to download the file. |

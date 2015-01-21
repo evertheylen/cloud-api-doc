@@ -297,8 +297,6 @@ Get tags on a file.
 | 200 | Request has succeeded. |
 | 404 | Tag not found. |
 
-| [DELETE /files/{fileId}/tags/{tagId}](#delete-filesfileidtagstagid) | Remove a tag from a file. |
-
 ## DELETE /files/{fileId}/tags/{tagId}
 
 Removes a tag from a file.

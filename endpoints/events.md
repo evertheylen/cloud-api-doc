@@ -7,7 +7,6 @@ An event is a collection of photos. By default, events are created per day. The 
 | [GET /events](#get-events) | Gets a user's events. |
 | [GET /events/{eventId}](#get-eventseventid) | Returns an array of the user's events. |
 | [PUT /events/{eventId}](#put-eventseventid) | Updates a user event. |
-| [DELETE /events/{eventId}](#delete-eventseventid) | Deletes an event. |
 | [GET /events/{eventId}/files](#get-eventseventidfiles) | Returns an array of the files in an event. |
 
 ## GET /events
