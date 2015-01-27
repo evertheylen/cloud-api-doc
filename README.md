@@ -162,4 +162,3 @@ All date fields are returned as [ISO 8601](https://www.google.com/search?q=%22IS
 * [Files](endpoints/files.md)
 * [Tags](endpoints/tags.md)
 * [Search](endpoints/search.md)
-* [Trash](endpoints/trash.md)

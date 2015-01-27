@@ -76,8 +76,8 @@ Gets a list of a user's files.
 
 | Name | Type | Description |
 |------|:----:|-------------|
-| Page | integer | The page number to retrieve when retrieving multiple pages of files. |
-| Per_Page | integer | The number of files per page to retrieve when retrieving multiple pages of files (default is 100). |
+| page | integer | The page number to retrieve when retrieving multiple pages of files. |
+| per_page | integer | The number of files per page to retrieve when retrieving multiple pages of files (default is 100). |
 
 ### Response
 

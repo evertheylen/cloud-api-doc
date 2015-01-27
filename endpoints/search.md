@@ -2,14 +2,12 @@
 
 The Eyefi Cloud allows for an extensive number of search operations through either ad-hoc searching with
 `GET /search/files` or through the saved searches with `POST /search/saved` and `GET /search/saved/{searchId}/files`.
-Please note that the underlying saved search capability is near real-time but not synchronous with updates. As such, it 
-may take a few seconds for search results to update when changes are made to searched objects or queries have just
-been created or updated. `GET /search/files`, however, does return search results synchronously when called.
+Please note that the underlying saved search capability is near real-time but not synchronous with updates. As such, it may take a few seconds for search results to update when changes are made to searched objects or queries have just been created or updated. `GET /search/files`, however, does return search results synchronously when called.
 
 | Method | Description |
 |--------|-------------|
 | [GET /search/files](#get-searchfiles) | Gets a list of files that match the search criteria. |
-| [GET /search/saved](#get-searchsaved) | Gets the list of saved searches available ot a user. |
+| [GET /search/saved](#get-searchsaved) | Gets the list of saved searches available to a user. |
 | [POST /search/saved](#post-searchsaved) | Create a new saved search. |
 | [PUT /search/saved/{searchid}](#put-searchsaved) | Update a saved search. |
 | [DELETE /search/saved/{searchid}](#delete-searchsaved) | Delete a saved search. |
@@ -27,8 +25,8 @@ Creates an ad-hoc search and returns the file list.
 
 | Name | Type | Description |
 |------|:----:|-------------|
-| Page | integer | The page number to retrieve when retrieving multiple pages of files. |
-| Per_Page | integer | The number of files per page to retrieve when retrieving multiple pages of files (default is 100). |
+| page | integer | The page number to retrieve when retrieving multiple pages of files. |
+| per_page | integer | The number of files per page to retrieve when retrieving multiple pages of files (default is 100). |
 | favorite | boolean | Indicator if the file is favorited (not yet implemented in client UI). |
 | in_trash | boolean | Indicator if trash is to be searched (default is false). |
 | has_geodata | boolean | Indicator if geodata is required for the file to be included in the search results. |
@@ -352,8 +350,8 @@ Gets a list of files that match the saved search criteria.
 | Name | Type | Description |
 |------|:----:|-------------|
 | searchId | integer | The ID of the saved search. |
-| Page | integer | The page number to retrieve when retrieving multiple pages of files. |
-| Per_Page | integer | The number of files per page to retrieve when retrieving multiple pages of files (default is 100). |
+| page | integer | The page number to retrieve when retrieving multiple pages of files. |
+| per_page | integer | The number of files per page to retrieve when retrieving multiple pages of files (default is 100). |
 
 ### Response
 
