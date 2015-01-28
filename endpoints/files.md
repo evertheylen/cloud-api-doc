@@ -46,7 +46,7 @@ Uploads a file up to 100 MB.
 |------|:----:|-------------|
 | id | integer | File ID. |
 | name | string | File name. |
-| date_time_taken | Date | Date and time the file was created. |
+| date_time_taken | date-time | Date and time the file was created. |
 | size / width | integer | The file's width in pixels. |
 | size / height | integer | The file's height in pixels. |
 | thumbnails / url | string | Base URL for the thumbnail; append file size to return specific sizes. |
@@ -120,7 +120,7 @@ Gets a list of a user's files.
 | name | string | File name. |
 | media | string | Full URL that can be used to download the file. |
 | bytes | integer | Size of the file in bytes. |
-| date_time_taken | Date | Date and time the file was created. |
+| date_time_taken | date-time | Date and time the file was created. |
 | size / width | integer | The file's width in pixels. |
 | size / height | integer | The file's height in pixels. |
 | exif | dictionary | The file's exif information as provided by the camera. |
@@ -186,7 +186,7 @@ Gets detailed information on a file.
 | name | string | File name. |
 | media | string | Full URL that can be used to download the file. |
 | bytes | integer | Size of the file in bytes. |
-| date_time_taken | Date | Date and time the file was created. |
+| date_time_taken | date-time | Date and time the file was created. |
 | size / width | integer | The file's width in pixels. |
 | size / height | integer | The file's height in pixels. |
 | exif | dictionary | The file's exif information as provided by the camera. |

@@ -36,8 +36,8 @@ Returns an array of the user's events.
 | id | integer | The event's ID. |
 | name | string | The event's name. |
 | file_count | integer | The number of files in the event. |
-| start_date | Date | The event's start date. |
-| end_date | Date | The event's end date. |
+| start_date | date-time | The event's start date. |
+| end_date | date-time | The event's end date. |
 
 ### Status Codes
 
@@ -74,8 +74,8 @@ Gets a user event.
 | id | integer | The event's ID. |
 | name | string | The event's name. |
 | file_count | integer | The number of files in the event. |
-| start_date | Date | The event's start date. |
-| end_date | Date | The event's end date. |
+| start_date | date-time | The event's start date. |
+| end_date | date-time | The event's end date. |
 
 ### Status Codes
 
@@ -94,8 +94,8 @@ Updates an event.
 |------|:----:|-------------|
 | eventId | integer | ID of the event to update. |
 | name | string | New event name. |
-| start_date | Date | The new start date for the event. |
-| end_date | Date | The new end date for the event. |
+| start_date | date-time | The new start date for the event. |
+| end_date | date-time | The new end date for the event. |
 
 ### Response
 
@@ -114,8 +114,8 @@ Updates an event.
 | id | integer | The event's ID. |
 | name | string | The event's name. |
 | file_count | integer | The number of files in the event. |
-| start_date | Date | The event's start date. |
-| end_date | Date | The event's end date. |
+| start_date | date-time | The event's start date. |
+| end_date | date-time | The event's end date. |
 
 ### Status Codes
 
@@ -186,7 +186,7 @@ Returns an array of files.
 |------|:----:|-------------|
 | id | integer | File ID. |
 | name | string | File name. |
-| date_time_taken | Date | Date and time the file was created. |
+| date_time_taken | date-time | Date and time the file was created. |
 | size / width | integer | The file's width in pixels. |
 | size / height | integer | The file's height in pixels. |
 | thumbnails / url | string | Base URL for the thumbnail; append file size to return specific sizes. |

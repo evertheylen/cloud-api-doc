@@ -87,7 +87,7 @@ Creates an ad-hoc search and returns the file list.
 | name | string | File name. |
 | media | string | Full URL that can be used to download the file. |
 | bytes | integer | Size of the file in bytes. |
-| date_time_taken | Date | Date and time the file was created. |
+| date_time_taken | date-time | Date and time the file was created. |
 | size / width | integer | The file's width in pixels. |
 | size / height | integer | The file's height in pixels. |
 | exif | dictionary | The file's exif information as provided by the camera. |
@@ -378,7 +378,7 @@ Gets a list of files that match the saved search criteria.
 | name | string | File name. |
 | media | string | Full URL that can be used to download the file. |
 | bytes | integer | Size of the file in bytes. |
-| date_time_taken | Date | Date and time the file was created. |
+| date_time_taken | date-time | Date and time the file was created. |
 | size / width | integer | The file's width in pixels. |
 | size / height | integer | The file's height in pixels. |
 | exif | dictionary | The file's exif information as provided by the camera. |

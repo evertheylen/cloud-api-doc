@@ -51,8 +51,8 @@ Adds a user album.
 | id | integer | Album ID. |
 | name | string | Album name. |
 | file_count | integer | Number of files in the album. |
-| start_date | Date | Date of the earliest photo in the album. |
-| end_date | Date | Date of the latest photo in the album. |
+| start_date | date-time | Date of the earliest photo in the album. |
+| end_date | date-time | Date of the latest photo in the album. |
 | privacy | integer | Privacy setting for the album. Use 0 for private and 1 for public. Setting privacy to 1 also returns a share URL. |
 | share_url | string | URL for sharing the album. |
 | thumbnails / url | string | Base URL for the thumbnail; append file size to return specific sizes. |
@@ -97,8 +97,8 @@ Gets a user's albums.
 | id | integer | Album ID. |
 | name | string | Album name. |
 | file_count | integer | Number of files in the album. |
-| start_date | Date | Date of the earliest photo in the album. |
-| end_date | Date | Date of the latest photo in the album. |
+| start_date | date-time | Date of the earliest photo in the album. |
+| end_date | date-time | Date of the latest photo in the album. |
 | privacy | integer | Privacy setting for the album. Use 0 for private and 1 for public. Setting privacy to 1 also returns a share URL. |
 | share_url | string | URL for sharing the album. |
 | thumbnails / url | string | Base URL for the thumbnail; append file size to return specific sizes. |
@@ -150,8 +150,8 @@ Gets a specific album.
 | id | integer | Album ID. |
 | name | string | Album name. |
 | file_count | integer | Number of files in the album. |
-| start_date | Date | Date of the earliest photo in the album. |
-| end_date | Date | Date of the latest photo in the album. |
+| start_date | date-time | Date of the earliest photo in the album. |
+| end_date | date-time | Date of the latest photo in the album. |
 | privacy | integer | Privacy setting for the album. Use 0 for private and 1 for public. Setting privacy to 1 also returns a share URL. |
 | share_url | string | URL for sharing the album. |
 | thumbnails / url | string | Base URL for the thumbnail; append file size to return specific sizes. |
@@ -205,8 +205,8 @@ Updates an album.
 | id | integer | Album ID. |
 | name | string | Album name. |
 | file_count | integer | Number of files in the album. |
-| start_date | Date | Date of the earliest photo in the album. |
-| end_date | Date | Date of the latest photo in the album. |
+| start_date | date-time | Date of the earliest photo in the album. |
+| end_date | date-time | Date of the latest photo in the album. |
 | privacy | integer | Privacy setting for the album. Use 0 for private and 1 for public. Setting privacy to 1 also returns a share URL. |
 | share_url | string | URL for sharing the album. |
 | thumbnails / url | string | Base URL for the thumbnail; append file size to return specific sizes. |
@@ -260,7 +260,7 @@ Gets the files in an album.
 |------|:----:|-------------|
 | id | integer | File ID. |
 | name | string | File name. |
-| date_time_taken | Date | Date and time the file was created. |
+| date_time_taken | date-time | Date and time the file was created. |
 | size / width | integer | The file's width in pixels. |
 | size / height | integer | The file's height in pixels. |
 | thumbnails / url | string | Base URL for the thumbnail; append file size to return specific sizes. |
@@ -314,7 +314,7 @@ Returns a list of the updated files.
 |------|:----:|-------------|
 | id | integer | File ID. |
 | name | string | File name. |
-| date_time_taken | Date | Date and time the file was created. |
+| date_time_taken | date-time | Date and time the file was created. |
 | size / width | integer | The file's width in pixels. |
 | size / height | integer | The file's height in pixels. |
 | thumbnails / url | string | Base URL for the thumbnail; append file size to return specific sizes. |
