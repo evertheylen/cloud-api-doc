@@ -159,8 +159,8 @@ All date fields are returned as [ISO 8601](https://www.google.com/search?q=%22IS
 
 ## Endpoint Listing
 
-* [Albums](endpoints/albums.md)
 * [Events](endpoints/events.md)
-* [Files](endpoints/files.md)
+* [Albums](endpoints/albums.md)
 * [Tags](endpoints/tags.md)
+* [Files](endpoints/files.md)
 * [Search](endpoints/search.md)
