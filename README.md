@@ -137,11 +137,13 @@ or a list:
 
 ## Errors
 
-When an error occurs the server returns a 4xx or 5xx status code and JSON error message that should be used purely for debugging:
+When an error occurs the server returns a 4xx or 5xx HTTP status code and an error object with more information:
 
 ```JavaScript
 {
-    "message": "Invalid email address"
+    "message": "Invalid name",
+    "status": 400,
+    "code": 2060
 }
 ```
 
