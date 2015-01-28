@@ -58,15 +58,13 @@ Gets a user event.
 ### Response
 
 ```JavaScript
-[
-    {
-        "id": "integer",
-        "name": "string",
-        "file_count": "integer",
-        "start_date": "date-time",
-        "end_date": "date-time"
-    }
-]
+{
+    "id": "integer",
+    "name": "string",
+    "file_count": "integer",
+    "start_date": "date-time",
+    "end_date": "date-time"
+}
 ```
 
 | Key | Type | Description |
@@ -94,8 +92,6 @@ Updates an event.
 |------|:----:|-------------|
 | eventId | integer | ID of the event to update. |
 | name | string | New event name. |
-| start_date | date-time | The new start date for the event. |
-| end_date | date-time | The new end date for the event. |
 
 ### Response
 
@@ -133,8 +129,6 @@ Gets the files in an event.
 | Name | Type | Description |
 |------|:----:|-------------|
 | eventId | integer | The ID of the event for which to get files. |
-| page | integer | The page number to retrieve when retrieving multiple pages of files. |
-| per_page | integer | The number of files per page to retrieve when retrieving multiple pages of files (default is 100). |
 
 ### Returns
 
@@ -143,43 +137,40 @@ Returns an array of files.
 ### Response
 
 ```JavaScript
-{
-    "total_count": "integer",
-    "items": [
-        {
-            "id": "integer",
-            "name": "string",
-            "media": "string",
-            "bytes": "integer",
-            "date_time_taken": "date-time",
-            "size": {
-                "width": "integer",
-                "height": "integer"
-            },
-            "exif": {
-                "exposure_comp": "string",
-                "shutter_speed": "string",
-                "flash": "string",
-                "metering_mode": "string",
-                "lens": "string",
-                "camera": "string",
-                "iso": "string",
-                "focal_length": "string",
-                "aperture": "string"
-            },
-            "gps": {
-                "lat": "float",
-                "lng": "float"
-            },
-            "thumbnails": {
-                "url": "string",
-                "s640": "string",
-                "s1280": "string",
-                "s2048": "string"
-            }
+[
+    {
+        "id": "integer",
+        "name": "string",
+        "media": "string",
+        "bytes": "integer",
+        "date_time_taken": "date-time",
+        "size": {
+            "width": "integer",
+            "height": "integer"
+        },
+        "exif": {
+            "exposure_comp": "string",
+            "shutter_speed": "string",
+            "flash": "string",
+            "metering_mode": "string",
+            "lens": "string",
+            "camera": "string",
+            "iso": "string",
+            "focal_length": "string",
+            "aperture": "string"
+        },
+        "gps": {
+            "lat": "float",
+            "lng": "float"
+        },
+        "thumbnails": {
+            "url": "string",
+            "s640": "string",
+            "s1280": "string",
+            "s2048": "string"
         }
-    ]
-}
+    }
+]
 ```
 
 | Key | Type | Description |
