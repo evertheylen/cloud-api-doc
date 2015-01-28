@@ -25,8 +25,8 @@ Returns an array of the user's events.
         "id": "integer",
         "name": "string",
         "file_count": "integer",
-        "start_date": "Date",
-        "end_date": "Date"
+        "start_date": "date-time",
+        "end_date": "date-time"
     }
 ]
 ```
@@ -63,8 +63,8 @@ Gets a user event.
         "id": "integer",
         "name": "string",
         "file_count": "integer",
-        "start_date": "Date",
-        "end_date": "Date"
+        "start_date": "date-time",
+        "end_date": "date-time"
     }
 ]
 ```
@@ -104,8 +104,8 @@ Updates an event.
     "id": "integer",
     "name": "string",
     "file_count": "integer",
-    "start_date": "Date",
-    "end_date": "Date"
+    "start_date": "date-time",
+    "end_date": "date-time"
 }
 ```
 
@@ -151,7 +151,7 @@ Returns an array of files.
             "name": "string",
             "media": "string",
             "bytes": "integer",
-            "date_time_taken": "Date",
+            "date_time_taken": "date-time",
             "size": {
                 "width": "integer",
                 "height": "integer"

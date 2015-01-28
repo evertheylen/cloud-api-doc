@@ -28,7 +28,7 @@ Uploads a file up to 100 MB.
 {
     "id": "integer",
     "name": "string",
-    "date_time_taken": "Date",
+    "date_time_taken": "date-time",
     "size": {
         "width": "integer",
         "height": "integer"
@@ -82,7 +82,7 @@ Gets a list of a user's files.
             "name": "string",
             "media": "string",
             "bytes": "integer",
-            "date_time_taken": "Date",
+            "date_time_taken": "date-time",
             "size": {
                 "width": "integer",
                 "height": "integer"
@@ -151,7 +151,7 @@ Gets detailed information on a file.
     "name": "string",
     "media": "string",
     "bytes": "integer",
-    "date_time_taken": "Date",
+    "date_time_taken": "date-time",
     "size": {
         "width": "integer",
         "height": "integer"

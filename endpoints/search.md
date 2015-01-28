@@ -49,7 +49,7 @@ Creates an ad-hoc search and returns the file list.
             "name": "string",
             "media": "string",
             "bytes": "integer",
-            "date_time_taken": "Date",
+            "date_time_taken": "date-time",
             "size": {
                 "width": "integer",
                 "height": "integer"
@@ -340,7 +340,7 @@ Gets a list of files that match the saved search criteria.
             "name": "string",
             "media": "string",
             "bytes": "integer",
-            "date_time_taken": "Date",
+            "date_time_taken": "date-time",
             "size": {
                 "width": "integer",
                 "height": "integer"

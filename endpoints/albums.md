@@ -31,8 +31,8 @@ Adds a user album.
     "id": "integer",
     "name": "string",
     "file_count": "integer",
-    "start_date": "Date",
-    "end_date": "Date",
+    "start_date": "date-time",
+    "end_date": "date-time",
     "privacy": "integer",
     "share_url": "string",
     "thumbnails": {
@@ -78,8 +78,8 @@ Gets a user's albums.
         "id": "integer",
         "name": "string",
         "file_count": "integer",
-        "start_date": "Date",
-        "end_date": "Date",
+        "start_date": "date-time",
+        "end_date": "date-time",
         "privacy": "integer",
         "share_url": "string",
         "thumbnails": {
@@ -130,8 +130,8 @@ Gets a specific album.
     "id": "integer",
     "name": "string",
     "file_count": "integer",
-    "start_date": "Date",
-    "end_date": "Date",
+    "start_date": "date-time",
+    "end_date": "date-time",
     "privacy": "integer",
     "share_url": "string",
     "thumbnails": {
@@ -185,8 +185,8 @@ Updates an album.
     "id": "integer",
     "name": "string",
     "file_count": "integer",
-    "start_date": "Date",
-    "end_date": "Date",
+    "start_date": "date-time",
+    "end_date": "date-time",
     "privacy": "integer",
     "share_url": "string",
     "thumbnails": {
@@ -239,7 +239,7 @@ Gets the files in an album.
     {
         "id": "integer",
         "name": "string",
-        "date_time_taken": "Date",
+        "date_time_taken": "date-time",
         "size": {
             "width": "integer",
             "height": "integer"
@@ -295,7 +295,7 @@ Returns a list of the updated files.
     {
         "id": "integer",
         "name": "string",
-        "date_time_taken": "Date",
+        "date_time_taken": "date-time",
         "size": {
             "width": "integer",
             "height": "integer"
