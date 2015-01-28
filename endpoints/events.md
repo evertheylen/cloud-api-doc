@@ -13,10 +13,6 @@ An event is a collection of photos. By default, events are created per day. The 
 
 Gets a user's events.
 
-### Authorization
-
-`User`
-
 ### Returns
 
 Returns an array of the user's events.
@@ -52,10 +48,6 @@ Returns an array of the user's events.
 ## GET /events/{eventId}
 
 Gets a user event.
-
-### Authorization
-
-`User`
 
 ### Parameters
 
@@ -96,10 +88,6 @@ Gets a user event.
 
 Updates an event.
 
-### Authorization
-
-`User`
-
 ### Parameters
 
 | Name | Type | Description |
@@ -139,10 +127,6 @@ Updates an event.
 ## GET /events/{eventId}/files
 
 Gets the files in an event.
-
-### Authorization
-
-`User`
 
 ### Parameters
 

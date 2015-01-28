@@ -18,10 +18,6 @@ An album is a user-created collection of files. A file can be in any number of a
 
 Adds a user album.
 
-### Authorization
-
-`User`
-
 ### Parameters
 
 | Name | Type | Description |
@@ -74,10 +70,6 @@ Adds a user album.
 
 Gets a user's albums.
 
-### Authorization
-
-`User`
-
 ### Response
 
 ```JSON
@@ -124,10 +116,6 @@ Gets a user's albums.
 ## GET /albums/{albumId}
 
 Gets a specific album.
-
-### Authorization
-
-`User`
 
 ### Parameters
 
@@ -181,10 +169,6 @@ Gets a specific album.
 ## PUT /albums/{albumId}
 
 Updates an album.
-
-### Authorization
-
-`User`
 
 ### Parameters
 
@@ -242,10 +226,6 @@ Updates an album.
 
 Gets the files in an album.
 
-### Authorization
-
-`User`
-
 ### Parameters
 
 | Name | Type | Description |
@@ -297,10 +277,6 @@ Gets the files in an album.
 ## PUT /albums/{albumId}/files
 
 Updates album files. Files are listed as a comma-separated array. Can be used to re-order the files in an album.
-
-### Authorization
-
-`User`
 
 ### Parameters
 
@@ -357,10 +333,6 @@ Returns a list of the updated files.
 
 Removes a file from an album.
 
-### Authorization
-
-`User`
-
 ### Parameters
 
 | Name | Type | Description |
@@ -378,10 +350,6 @@ Removes a file from an album.
 ## DELETE /albums/{albumId}
 
 Deletes an album. This is not recoverable. Does not affect the files contained in the album.
-
-### Authorization
-
-`User`
 
 ### Parameters
 

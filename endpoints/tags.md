@@ -14,10 +14,6 @@ endpoint. If a tag is applied to a file and it does not exist, it is automatical
 
 Gets a user's tags.
 
-### Authorization
-
-`User`
-
 ### Response
 
 ```JSON
@@ -46,10 +42,6 @@ Gets a user's tags.
 ## GET /tags/{tagId}
 
 Gets a specific tag.
-
-### Authorization
-
-`User`
 
 ### Parameters
 
@@ -85,10 +77,6 @@ Gets a specific tag.
 ## PUT /tags/{tagId}
 
 Updates a tag.
-
-### Authorization
-
-`User`
 
 ### Parameters
 
@@ -126,10 +114,6 @@ Updates a tag.
 ## DELETE /tags/{tagId}
 
 Deletes a tag.
-
-### Authorization
-
-`User`
 
 ### Parameters
 

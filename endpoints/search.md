@@ -17,10 +17,6 @@ Please note that the underlying saved search capability is near real-time but no
 
 Creates an ad-hoc search and returns the file list.
 
-### Authorization
-
-`user`
-
 ### Parameters
 
 | Name | Type | Description |
@@ -112,10 +108,6 @@ Creates an ad-hoc search and returns the file list.
 
 Gets the list of saved searches available to a user.
 
-### Authorization
-
-`user`
-
 ### Response
 
 ```JSON
@@ -167,10 +159,6 @@ Gets the list of saved searches available to a user.
 ## POST /search/saved
 
 Creates a new saved search.
-
-### Authorization
-
-`user`
 
 ### Parameters
 
@@ -243,10 +231,6 @@ Creates a new saved search.
 ## PUT /search/saved/{searchId}
 
 Updates a saved search.
-
-### Authorization
-
-`user`
 
 ### Parameters
 
@@ -321,10 +305,6 @@ Updates a saved search.
 
 Deletes a saved search.
 
-### Authorization
-
-`user`
-
 ### Parameters
 
 | Name | Type | Description |
@@ -340,10 +320,6 @@ Deletes a saved search.
 ## GET /search/saved/{searchId}/files
 
 Gets a list of files that match the saved search criteria.
-
-### Authorization
-
-`user`
 
 ### Parameters
 

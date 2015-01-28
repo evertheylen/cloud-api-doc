@@ -16,10 +16,6 @@ A file is an individual photo. When a file is uploaded Eyefi Cloud stores the fi
 
 Uploads a file up to 100 MB.
 
-### Authorization
-
-`User`
-
 ### Parameters
 
 | Name | Type | Description |
@@ -67,10 +63,6 @@ Uploads a file up to 100 MB.
 ## GET /files
 
 Gets a list of a user's files.
-
-### Authorization
-
-`User`
 
 ### Parameters
 
@@ -145,10 +137,6 @@ Gets a list of a user's files.
 
 Gets detailed information on a file.
 
-### Authorization
-
-`User`
-
 ### Parameters
 
 | Name | Type | Description |
@@ -220,10 +208,6 @@ Gets detailed information on a file.
 
 Add a tag to a file.
 
-### Authorization
-
-`User`
-
 ### Parameters
 
 | Name | Type | Description |
@@ -262,10 +246,6 @@ Add a tag to a file.
 
 Get tags on a file.
 
-### Authorization
-
-`User`
-
 ### Parameters
 
 | Name | Type | Description |
@@ -301,10 +281,6 @@ Get tags on a file.
 
 Removes a tag from a file.
 
-### Authorization
-
-`User`
-
 ### Parameters
 
 | Name | Type | Description |
@@ -322,10 +298,6 @@ Removes a tag from a file.
 ## DELETE /files/{fileId}
 
 Deletes a file.
-
-### Authorization
-
-`User`
 
 ### Parameters
 
