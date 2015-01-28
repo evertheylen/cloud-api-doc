@@ -16,7 +16,7 @@ Gets a user's tags.
 
 ### Response
 
-```JSON
+```JavaScript
 [
     {
         "id": "integer",
@@ -51,7 +51,7 @@ Gets a specific tag.
 
 ### Returns
 
-```JSON
+```JavaScript
 {
     "id": "integer",
     "name": "string",
@@ -87,7 +87,7 @@ Updates a tag.
 
 ### Returns
 
-```JSON
+```JavaScript
 {
     "id": "integer",
     "name": "string",

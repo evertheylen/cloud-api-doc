@@ -26,7 +26,7 @@ Adds a user album.
 
 ### Returns
 
-```JSON
+```JavaScript
 {
     "id": "integer",
     "name": "string",
@@ -72,7 +72,7 @@ Gets a user's albums.
 
 ### Response
 
-```JSON
+```JavaScript
 [
     {
         "id": "integer",
@@ -125,7 +125,7 @@ Gets a specific album.
 
 ### Returns
 
-```JSON
+```JavaScript
 {
     "id": "integer",
     "name": "string",
@@ -180,7 +180,7 @@ Updates an album.
 
 ### Returns
 
-```JSON
+```JavaScript
 {
     "id": "integer",
     "name": "string",
@@ -234,7 +234,7 @@ Gets the files in an album.
 
 ### Returns
 
-```JSON
+```JavaScript
 [
     {
         "id": "integer",
@@ -290,7 +290,7 @@ Returns a list of the updated files.
 
 ### Response
 
-```JSON
+```JavaScript
 [
     {
         "id": "integer",

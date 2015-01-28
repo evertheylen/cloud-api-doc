@@ -96,7 +96,7 @@ curl https://api.eyefi.com/3/albums/12345678
 
 All responses come in JSON format in either a simple envelope around a dictionary:
 
-```JSON
+```JavaScript
 {
     "id": 100000000,
     "name": "NAME",
@@ -106,7 +106,7 @@ All responses come in JSON format in either a simple envelope around a dictionar
 
 or a list:
 
-```JSON
+```JavaScript
 [
     {
         "id": 100000001,
@@ -139,7 +139,7 @@ or a list:
 
 When an error occurs the server returns a 4xx or 5xx status code and JSON error message that should be used purely for debugging:
 
-```JSON
+```JavaScript
 {
     "message": "Invalid email address"
 }

@@ -40,7 +40,7 @@ Creates an ad-hoc search and returns the file list.
 
 ### Response
 
-```JSON
+```JavaScript
 {
     "total_count": "integer",
     "items": [
@@ -110,7 +110,7 @@ Gets the list of saved searches available to a user.
 
 ### Response
 
-```JSON
+```JavaScript
 [
     {
         "id": "integer",
@@ -181,7 +181,7 @@ Creates a new saved search.
 
 ### Response
 
-```JSON
+```JavaScript
 {
     "id": "integer",
     "name": "string",
@@ -254,7 +254,7 @@ Updates a saved search.
 
 ### Response
 
-```JSON
+```JavaScript
 {
     "id": "integer",
     "name": "string",
@@ -331,7 +331,7 @@ Gets a list of files that match the saved search criteria.
 
 ### Response
 
-```JSON
+```JavaScript
 {
     "total_count": "integer",
     "items": [

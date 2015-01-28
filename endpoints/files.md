@@ -24,7 +24,7 @@ Uploads a file up to 100 MB.
 
 ### Response
 
-```JSON
+```JavaScript
 {
     "id": "integer",
     "name": "string",
@@ -73,7 +73,7 @@ Gets a list of a user's files.
 
 ### Response
 
-```JSON
+```JavaScript
 {
     "total_count": "integer",
     "items": [
@@ -145,7 +145,7 @@ Gets detailed information on a file.
 
 ### Response
 
-```JSON
+```JavaScript
 {
     "id": "integer",
     "name": "string",
@@ -218,7 +218,7 @@ Add a tag to a file.
 
 ### Returns
 
-```JSON
+```JavaScript
 {
     "id": "integer",
     "name": "string",
@@ -254,7 +254,7 @@ Get tags on a file.
 
 ### Response
 
-```JSON
+```JavaScript
 [
     {
         "id": "integer",

@@ -19,7 +19,7 @@ Returns an array of the user's events.
 
 ### Response
 
-```JSON
+```JavaScript
 [
     {
         "id": "integer",
@@ -57,7 +57,7 @@ Gets a user event.
 
 ### Response
 
-```JSON
+```JavaScript
 [
     {
         "id": "integer",
@@ -99,7 +99,7 @@ Updates an event.
 
 ### Response
 
-```JSON
+```JavaScript
 {
     "id": "integer",
     "name": "string",
@@ -142,7 +142,7 @@ Returns an array of files.
 
 ### Response
 
-```JSON
+```JavaScript
 {
     "total_count": "integer",
     "items": [
