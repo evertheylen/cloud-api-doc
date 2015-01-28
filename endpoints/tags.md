@@ -1,8 +1,7 @@
 # Tags
 
-Tags can be assigned to files to further categorize them.  Many of the APIs to apply tags are located under the /files
-endpoint.  If a tag is applied to a file and it does not exist, it is automatically created.  Other options are
-available under the /tags endpoint.
+Tags can be assigned to files to further categorize them. Many of the APIs to apply tags are located under the `/files`
+endpoint. If a tag is applied to a file and it does not exist, it is automatically created. Other options are available under the `/tags` endpoint.
 
 | Method | Description |
 |--------|-------------|
@@ -15,19 +14,15 @@ available under the /tags endpoint.
 
 Gets a user's tags.
 
-### Authorization
-
-`User`
-
 ### Response
 
 ```JSON
 [
-  {
-    "id": "integer",
-    "name": "string",
-    "file_count": "integer"
-  }
+    {
+        "id": "integer",
+        "name": "string",
+        "file_count": "integer"
+    }
 ]
 ```
 
@@ -48,10 +43,6 @@ Gets a user's tags.
 
 Gets a specific tag.
 
-### Authorization
-
-`User`
-
 ### Parameters
 
 | Name | Type | Description |
@@ -62,9 +53,9 @@ Gets a specific tag.
 
 ```JSON
 {
-  "id": "integer",
-  "name": "string",
-  "file_count": "integer"
+    "id": "integer",
+    "name": "string",
+    "file_count": "integer"
 }
 ```
 
@@ -87,10 +78,6 @@ Gets a specific tag.
 
 Updates a tag.
 
-### Authorization
-
-`User`
-
 ### Parameters
 
 | Name | Type | Description |
@@ -102,9 +89,9 @@ Updates a tag.
 
 ```JSON
 {
-  "id": "integer",
-  "name": "string",
-  "file_count": "integer"
+    "id": "integer",
+    "name": "string",
+    "file_count": "integer"
 }
 ```
 
@@ -128,10 +115,6 @@ Updates a tag.
 
 Deletes a tag.
 
-### Authorization
-
-`User`
-
 ### Parameters
 
 | Name | Type | Description |
@@ -143,4 +126,3 @@ Deletes a tag.
 | Code | Reason |
 |------|-------------|
 | 404 | Album not found. |
-

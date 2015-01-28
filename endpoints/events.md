@@ -1,23 +1,17 @@
 # Events
 
-An event is a collection of photos.  By default, they are created per day with the name of the event being the
-full name of the date on which the photos were taken.
+An event is a collection of photos. By default, events are created per day. The default name of an event is the full name of the date on which the photos were taken (e.g., January 20, 2015).
 
 | Method | Description |
 |--------|-------------|
 | [GET /events](#get-events) | Gets a user's events. |
 | [GET /events/{eventId}](#get-eventseventid) | Returns an array of the user's events. |
 | [PUT /events/{eventId}](#put-eventseventid) | Updates a user event. |
-| [DELETE /events/{eventId}](#delete-eventseventid) | Deletes an event. |
-| [GET /events/{eventId}/files](#get-eventseventidfiles) | Returns an array of files. |
+| [GET /events/{eventId}/files](#get-eventseventidfiles) | Returns an array of the files in an event. |
 
 ## GET /events
 
 Gets a user's events.
-
-### Authorization
-
-`User`
 
 ### Returns
 
@@ -27,13 +21,13 @@ Returns an array of the user's events.
 
 ```JSON
 [
-  {
-    "id": "integer",
-    "name": "string",
-    "file_count": "integer",
-    "start_date": "Date",
-    "end_date": "Date"
-  }
+    {
+        "id": "integer",
+        "name": "string",
+        "file_count": "integer",
+        "start_date": "Date",
+        "end_date": "Date"
+    }
 ]
 ```
 
@@ -55,10 +49,6 @@ Returns an array of the user's events.
 
 Gets a user event.
 
-### Authorization
-
-`User`
-
 ### Parameters
 
 | Name | Type | Description |
@@ -69,13 +59,13 @@ Gets a user event.
 
 ```JSON
 [
-  {
-    "id": "integer",
-    "name": "string",
-    "file_count": "integer",
-    "start_date": "Date",
-    "end_date": "Date"
-  }
+    {
+        "id": "integer",
+        "name": "string",
+        "file_count": "integer",
+        "start_date": "Date",
+        "end_date": "Date"
+    }
 ]
 ```
 
@@ -98,10 +88,6 @@ Gets a user event.
 
 Updates an event.
 
-### Authorization
-
-`User`
-
 ### Parameters
 
 | Name | Type | Description |
@@ -115,11 +101,11 @@ Updates an event.
 
 ```JSON
 {
-  "id": "integer",
-  "name": "string",
-  "file_count": "integer",
-  "start_date": "Date",
-  "end_date": "Date"
+    "id": "integer",
+    "name": "string",
+    "file_count": "integer",
+    "start_date": "Date",
+    "end_date": "Date"
 }
 ```
 
@@ -138,47 +124,17 @@ Updates an event.
 | 200 | Request has succeeded. |
 | 404 | Event not found. |
 
-## DELETE /events/{eventId}
-
-Deletes an event.
-
-### Authorization
-
-`User`
-
-### Parameters
-
-| Name | Type | Description |
-|------|:----:|-------------|
-| eventId | string | ID of the event to delete. |
-
-### Response
-
-| Key | Type | Description |
-|------|:----:|-------------|
-|  |  |  |
-
-### Status Codes
-
-| Code | Reason |
-|------|-------------|
-| 404 | Event not found.
-
 ## GET /events/{eventId}/files
 
 Gets the files in an event.
-
-### Authorization
-
-`User`
 
 ### Parameters
 
 | Name | Type | Description |
 |------|:----:|-------------|
 | eventId | integer | The ID of the event for which to get files. |
-| Page | integer | When retrieving multiple pages of files, this is the page number to retrieve |
-| Per_Page | integer | When retrieving multiple pages of files, this is the number of files per page to retrieve (default 100) |
+| page | integer | The page number to retrieve when retrieving multiple pages of files. |
+| per_page | integer | The number of files per page to retrieve when retrieving multiple pages of files (default is 100). |
 
 ### Returns
 
@@ -188,43 +144,41 @@ Returns an array of files.
 
 ```JSON
 {
-  "total_count": integer,
-  "items": {
-             [
-               {
-                 "id": integer,
-                 "name": "string",
-                 "media": "string",
-                 "bytes": integer,
-                 "date_time_taken": "Date",
-                 "size": {
-                   "width": integer,
-                   "height": integer
-                 },
-                 "exif": {
-                   "exposure_comp": "string",
-                   "shutter_speed": "string",
-                   "flash": "string",
-                   "metering_mode": "string",
-                   "lens": "string",
-                   "camera": "string",
-                   "iso": "string",
-                   "focal_length": "string",
-                   "aperture": "string"
-                 },
-                 "gps": {
-                   "lat": float, 
-                   "lng": float
-                 },
-                 "thumbnails": {
-                   "url": "string"
-                   "s640": "string",
-                   "s1280": "string",
-                   "s2048": "string",
-                 }
-               }
-             ]
-           }
+    "total_count": "integer",
+    "items": [
+        {
+            "id": "integer",
+            "name": "string",
+            "media": "string",
+            "bytes": "integer",
+            "date_time_taken": "Date",
+            "size": {
+                "width": "integer",
+                "height": "integer"
+            },
+            "exif": {
+                "exposure_comp": "string",
+                "shutter_speed": "string",
+                "flash": "string",
+                "metering_mode": "string",
+                "lens": "string",
+                "camera": "string",
+                "iso": "string",
+                "focal_length": "string",
+                "aperture": "string"
+            },
+            "gps": {
+                "lat": "float",
+                "lng": "float"
+            },
+            "thumbnails": {
+                "url": "string",
+                "s640": "string",
+                "s1280": "string",
+                "s2048": "string"
+            }
+        }
+    ]
 }
 ```
 
@@ -232,7 +186,7 @@ Returns an array of files.
 |------|:----:|-------------|
 | id | integer | File ID. |
 | name | string | File name. |
-| date_time_taken | Date | Date and time the file was taken. |
+| date_time_taken | Date | Date and time the file was created. |
 | size / width | integer | The file's width in pixels. |
 | size / height | integer | The file's height in pixels. |
 | thumbnails / url | string | Base URL for the thumbnail; append file size to return specific sizes. |
