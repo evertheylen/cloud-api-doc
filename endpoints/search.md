@@ -1,9 +1,5 @@
 # Search
 
-The Eyefi Cloud allows for an extensive number of search operations through either ad-hoc searching with
-`GET /search/files` or through the saved searches with `POST /search/saved` and `GET /search/saved/{searchId}/files`.
-Please note that the underlying saved search capability is near real-time but not synchronous with updates. As such, it may take a few seconds for search results to update when changes are made to searched objects or queries have just been created or updated. `GET /search/files`, however, does return search results synchronously when called.
-
 | Method | Description |
 |--------|-------------|
 | [GET /search/files](#get-searchfiles) | Gets a list of files that match the search criteria. |
