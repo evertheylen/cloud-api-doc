@@ -8,6 +8,12 @@ Each API endpoint is described in a separate file in the endpoints folder. Param
 
 Support for the API is provided on a best-effort basis through [Github Issues](https://github.com/eyefi/cloud-api-doc/issues).
 
+# Swagger 
+
+<img src="http://swagger.io/images/swaggerLogo360.png" align="right" height="40" />
+
+[Swagger](http://swagger.io) is a specification and complete framework implementation for describing, producing, consuming, and visualizing RESTful web services. It comes with dozens of resources from SDK generators to API consoles. The Eyefi Cloud API is Swagger 1.2 compliant. The Swagger UI API console and API documentation can be found at http://swagger.eyefi.com, which is the most up-to-date information available.
+
 # Authentication
 
 Eyefi's Cloud API uses the [OAuth 2.0 authorization framework](http://tools.ietf.org/html/rfc6749) for simple-but-effective authentication and authorization.
