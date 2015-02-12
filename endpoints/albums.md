@@ -222,6 +222,62 @@ Updates an album.
 | 400 | Bad request. |
 | 404 | Album not found. |
 
+## POST /albums/{albumId}/files
+
+Adds files to an album. Files are listed as a comma-separated array.
+
+### Parameters
+
+| Name | Type | Description |
+|------|:----:|-------------|
+| albumId | integer | The ID of the album to add files to. |
+| fileId | integer | ID of the file to add to the album. |
+
+### Returns
+
+Returns a list of the updated files.
+
+### Response
+
+```JavaScript
+[
+    {
+        "id": "integer",
+        "name": "string",
+        "date_time_taken": "date-time",
+        "size": {
+            "width": "integer",
+            "height": "integer"
+        },
+        "thumbnails": {
+            "url": "string",
+            "s640": "string",
+            "s1280": "string",
+            "s2048": "string"
+        }
+    }
+]
+```
+
+| Key | Type | Description |
+|------|:----:|-------------|
+| id | integer | File ID. |
+| name | string | File name. |
+| date_time_taken | date-time | Date and time the file was created. |
+| size / width | integer | The file's width in pixels. |
+| size / height | integer | The file's height in pixels. |
+| thumbnails / url | string | Base URL for the thumbnail; append file size to return specific sizes. |
+| thumbnails / s640 | string | Returns a 640px thumbnail. |
+| thumbnails / s1280 | string | Returns a 1280px thumbnail. |
+| thumbnails / s2048 | string | Returns a 2048px thumbnail. |
+
+### Status Codes
+
+| Code | Reason |
+|------|-------------|
+| 200 | Request has succeeded. |
+| 404 | Album not found. |
+
 ## GET /albums/{albumId}/files
 
 Gets the files in an album.
@@ -282,6 +338,7 @@ Updates album files. Files are listed as a comma-separated array. Can be used to
 
 | Name | Type | Description |
 |------|:----:|-------------|
+| albumId | integer | The ID of the album receiving the file updates. |
 | fileId | integer | ID of the file to add to the album. |
 
 ### Returns
