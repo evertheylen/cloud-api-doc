@@ -230,6 +230,7 @@ Adds files to an album. Files are listed as a comma-separated array.
 
 | Name | Type | Description |
 |------|:----:|-------------|
+| albumId | integer | The ID of the album to add files to. |
 | fileId | integer | ID of the file to add to the album. |
 
 ### Returns
@@ -276,7 +277,6 @@ Returns a list of the updated files.
 |------|-------------|
 | 200 | Request has succeeded. |
 | 404 | Album not found. |
-
 
 ## GET /albums/{albumId}/files
 
@@ -338,6 +338,7 @@ Updates album files. Files are listed as a comma-separated array. Can be used to
 
 | Name | Type | Description |
 |------|:----:|-------------|
+| albumId | integer | The ID of the album receiving the file updates. |
 | fileId | integer | ID of the file to add to the album. |
 
 ### Returns
