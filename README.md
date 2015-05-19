@@ -10,7 +10,7 @@ Support for the API is provided on a best-effort basis through [Github Issues](h
 
 # Swagger 
 
-<img src="http://swagger.io/images/swaggerLogo360.png" align="right" height="40" />
+<img src="https://s3.amazonaws.com/app.eyefi.com/developers/swagger-logo.png" align="right" height="70" />
 
 [Swagger](http://swagger.io) is a specification and complete framework implementation for describing, producing, consuming, and visualizing RESTful web services. It comes with dozens of resources from SDK generators to API consoles.
 
