@@ -4,7 +4,7 @@ The Eyefi Cloud API is a RESTful API that uses OAuth 2.0 for authentication.
 
 APIs are provided that allow for photo upload and download, album creation and curation, tag creation and curation, and photo searching. Eyefi will continue to maintain the publicly available API set through regular updates to the cloud-api-doc GitHub project.
 
-Each API endpoint is described in a separate file in the endpoints folder. Parameter descriptions are provided for each API. SDKs are availabe in [JavaScript](https://github.com/eyefi/eyefi-js), [Python](https://github.com/eyefi/cloud-api-python) and [PHP](https://github.com/dayalav/eyefiphp).
+Each API endpoint is described in a separate file in the endpoints folder. Parameter descriptions are provided for each API. SDKs are availabe in [several languages](#SDKs).
 
 Support for the API is provided on a best-effort basis through [Github Issues](https://github.com/eyefi/cloud-api-doc/issues).
 
@@ -172,3 +172,9 @@ All date fields are returned as [ISO 8601](https://www.google.com/search?q=%22IS
 * [Tags](endpoints/tags.md)
 * [Files](endpoints/files.md)
 * [Search](endpoints/search.md)
+
+# SDKs
+
+* [JavaScript](https://github.com/eyefi/eyefi-js)
+* [Python](https://github.com/eyefi/cloud-api-python)
+* [PHP](https://github.com/dayalav/eyefiphp)
